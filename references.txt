@@ -1,0 +1,5 @@
+Add any webpages or resources that you think is helpful with a brief description here!
+
+https://tieba.baidu.com/p/2539475202?red_tag=1023142011
+a topic about building a contesting system using user-defined algorithms on GoGui
+ 
