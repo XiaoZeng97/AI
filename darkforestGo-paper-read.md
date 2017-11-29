@@ -6,9 +6,22 @@ darkforestGo是Facebook推出的围棋AI，主要思想是使用DCNN进行long-t
 
 Go的难度在于high beaching factors和对小的变化敏感的subtle board situations. 传统的方法是使用Monte-Carlo Tree Search，但是这种方法会导致过于注重local的信息，最近，DCNN(Deep Convolution Netural Network) 被证明可以在Go上得到很好的效果。darkforestGo就构造了一个结合了MCTS和DCNN的hybrid model。
 
-## Method
+## Rule
 
-将棋盘视为19*19的Multiple channels image，每个channel编码一个不同层面的board information。将目前的棋盘状态作为输入，预测后面k步。根据之前的工作，使用了如下的feature set：
+- 整体: 棋子直线紧邻的点上，如果有同色棋子存在，则它们便相互连接成一个不可分割的整体。它们的气也应一并计算。
+- 气: 一个棋子在棋盘上，与它直线紧邻的空点是这个棋子的“气”。
+![标注黑白子的气](./go.PNG)
+- 提子: 子直线紧邻的点上，如果有异色棋子存在，这口气就不复存在。如所有的气均为对方所占据，便呈无气状态。无气状态的棋子不能在棋盘上存在。
+- 规则搜索网站: [Sensei’s Library](https://senseis.xmp.net/)
+
+## difficulty
+- 分钟多
+- 敏感性大（棋盘上小的部分改变会导致很大结果变化）
+=> 导致很大的搜索话费
+
+## Method
+DCNN+MCTS
+将棋盘视为19*19的Multiple channels image，每个channel编码一个不同层面的board information。将目前的棋盘状态作为输入，预测后面k步作为输出。根据之前的工作，使用了如下的feature set：
 ![Alt text](/images/darkforestgo_1.png)
 最终得到standard set中21个channel，加入extend set后得到25个channel.
 整个model长成这个样子：
