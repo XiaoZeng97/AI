@@ -11,12 +11,12 @@ Go的难度在于high beaching factors和对小的变化敏感的subtle board si
 - 整体: 棋子直线紧邻的点上，如果有同色棋子存在，则它们便相互连接成一个不可分割的整体。它们的气也应一并计算。
 - 气: 一个棋子在棋盘上，与它直线紧邻的空点是这个棋子的“气”。
 
-![Alt text](/images/darkforestgo_0.PNG)
+          ![Alt text](/images/darkforestgo_0.PNG)
 - 提子: 子直线紧邻的点上，如果有异色棋子存在，这口气就不复存在。如所有的气均为对方所占据，便呈无气状态。无气状态的棋子不能在棋盘上存在。
 - 规则搜索网站: [Sensei’s Library](https://senseis.xmp.net/)
 
 ## difficulty
-- 分钟多
+- 分支多
 - 敏感性大（棋盘上小的部分改变会导致很大结果变化）
 => 导致很大的搜索话费
 
