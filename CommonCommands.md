@@ -42,3 +42,8 @@ luarocks install xxx --local
 ```
 luarocks list
 ```
+
+- deal with out of memory:
+```
+CUDA_VISIBLE_DEVICES = GPU_ID
+```
