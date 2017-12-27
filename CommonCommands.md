@@ -52,11 +52,14 @@ CUDA_VISIBLE_DEVICES = GPU_ID
 
 eg. the GPU_ID can be set to 2
 
+---
+
 - analyze using gogui
 ```
 gogui-twogtp AvsB.dat
 w3m AvsB.html
 ```
+
 change "AvsB" to the sgf filename that you set for the match
 use w3m here to view the html page in the terminal
 can press Q then y to exit w3m
