@@ -47,7 +47,7 @@ luarocks list
 
 - deal with out of memory:
 ```
-CUDA_VISIBLE_DEVICES = GPU_ID
+CUDA_VISIBLE_DEVICES=GPU_ID
 ```
 
 eg. the GPU_ID can be set to 2
