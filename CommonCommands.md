@@ -56,7 +56,7 @@ eg. the GPU_ID can be set to 2
 
 - analyze using gogui
 ```
-gogui-twogtp AvsB.dat
+gogui-twogtp -analyze AvsB.dat
 w3m AvsB.html
 ```
 
