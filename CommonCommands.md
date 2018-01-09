@@ -68,12 +68,12 @@ can press Q then y to exit w3m
 
 - 用服务器上的gtp通信比赛(服务器)
 ```
-gogui-server -port 40002（随便选） -timeout 50（随便填） -verbos -loop "gtp运行文件路径"
+gogui-server -port 40002（随便选） -timeout 50（随便填） -verbose -loop "gtp运行文件路径"
 ```
 
 - 用服务器上的gtp通信比赛(本地)
 ```
-BLACK="gogui-client -timeout 5（随便填） 202.120.38.60 40002（对应端口）
-WHITE="gogui-client -timeout 5（随便填） 202.120.38.60 40003
+BLACK="gogui-client -timeout 5（随便填） 202.120.38.60 40002（对应端口）"
+WHITE="gogui-client -timeout 5（随便填） 202.120.38.60 40003"
 在gogui的bin的目录下 gogui -program "gogui-twogtp -black \"$BLACK\" -white \"$WHITE\" -time 5"
 ```
