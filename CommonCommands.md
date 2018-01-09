@@ -2,7 +2,7 @@
 ```
 ssh parameter@202.120.38.60 -p 21443
 ```
-password:sjtuwin
+password:******
 
 ---
 
