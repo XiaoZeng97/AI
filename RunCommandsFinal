@@ -1,0 +1,29 @@
+# RunCommands
+
+---
+parametergo 1.0.0
+
+```
+cd parameterGo/parameterGo-1.0.0/
+```
+
+直接运行：
+```
+python3 main.py
+```
+
+远程通信：
+```
+gogui-server -port 40003 -timeout 50 -verbose -loop "python3 parameterGo/parameterGo-1.0.0/main.py"
+```
+
+本地运行：
+```
+BLACK="gogui-client -timeout 5 202.120.38.60 400003"
+/gogui -program "gogui-twogtp -black \"$BLACK\" -white \"$WHITE\" -time 1s+5s/1"
+```
+
+进入虚拟环境：
+```
+source ~/goenvs/go/bin/activate
+```
